@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    _calendarManager = [[JTCalendarManager alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"] andTimeZone:[NSTimeZone localTimeZone]];
+    _calendarManager = [[JTCalendarManager alloc] initWithLocale:NSLocale.currentLocale andTimeZone:[NSTimeZone localTimeZone]];
     _calendarManager.delegate = self;
     
     // Generate random events sort by date using a dateformatter for the demonstration
