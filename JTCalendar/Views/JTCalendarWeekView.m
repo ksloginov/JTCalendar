@@ -66,6 +66,12 @@
 {
     NSDate *dayDate = _startDate;
     
+    BOOL isRTL = UIApplication.sharedApplication.userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft;
+    
+    if (isRTL) {
+        dayDate = [_manager.dateHelper addToDate:dayDate days:(_daysViews.count - 1)];
+    }
+    
     for(UIView<JTCalendarDay> *dayView in _daysViews){
         // Must done before setDate to dayView for `prepareDayView` method
         if(!enable){
@@ -81,7 +87,7 @@
         }
         
         dayView.date = dayDate;
-        dayDate = [_manager.dateHelper addToDate:dayDate days:1];
+        dayDate = [_manager.dateHelper addToDate:dayDate days: (isRTL) ? -1 : 1];
     }
 }
 
