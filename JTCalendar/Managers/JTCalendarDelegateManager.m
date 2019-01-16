@@ -90,7 +90,8 @@
         return [_manager.delegate calendar:self.manager dateForPreviousPageWithCurrentDate:currentDate];
     }
     
-    BOOL isRTL = [NSLocale characterDirectionForLanguage:NSLocale.currentLocale.languageCode] == 2;
+    NSString *language = [[NSLocale currentLocale] objectForKey: NSLocaleLanguageCode];
+    BOOL isRTL = [NSLocale characterDirectionForLanguage: language] == 2;
     
     if(_manager.settings.weekModeEnabled){
         return [_manager.dateHelper addToDate:currentDate weeks:isRTL ? 1 : -1];
@@ -104,7 +105,8 @@
 {
     NSAssert(currentDate != nil, @"currentDate cannot be nil");
     
-    BOOL isRTL = [NSLocale characterDirectionForLanguage:NSLocale.currentLocale.languageCode] == 2;
+    NSString *language = [[NSLocale currentLocale] objectForKey: NSLocaleLanguageCode];
+    BOOL isRTL = [NSLocale characterDirectionForLanguage: language] == 2;
     
     if(_manager.delegate && [_manager.delegate respondsToSelector:@selector(calendar:dateForNextPageWithCurrentDate:)]){
         return [_manager.delegate calendar:self.manager dateForNextPageWithCurrentDate:currentDate];

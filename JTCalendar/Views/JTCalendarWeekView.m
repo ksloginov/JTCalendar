@@ -66,7 +66,8 @@
 {
     NSDate *dayDate = _startDate;
     
-    BOOL isRTL = [NSLocale characterDirectionForLanguage:NSLocale.currentLocale.languageCode] == 2;
+    NSString *language = [[NSLocale currentLocale] objectForKey: NSLocaleLanguageCode];
+    BOOL isRTL = [NSLocale characterDirectionForLanguage: language] == 2;
     
     if (isRTL) {
         dayDate = [_manager.dateHelper addToDate:dayDate days:(_daysViews.count - 1)];
