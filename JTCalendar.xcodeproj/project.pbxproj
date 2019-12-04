@@ -39,6 +39,7 @@
 		163901E31FD49D4800C554BC /* JTCalendarWeekView.h in Headers */ = {isa = PBXBuildFile; fileRef = 163901931FD4987B00C554BC /* JTCalendarWeekView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		163901E41FD49D4800C554BC /* JTHorizontalCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 163901951FD4987B00C554BC /* JTHorizontalCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		163901E51FD49D4800C554BC /* JTVerticalCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 163901971FD4987B00C554BC /* JTVerticalCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0F82CB123981E17002E8600 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D0F82CAF23981E17002E8600 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		163901BF1FD49C1700C554BC /* JTCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		163901C11FD49C1700C554BC /* JTCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
 		163901C21FD49C1700C554BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F82CAF23981E17002E8600 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		1639015F1FD4975200C554BC = {
 			isa = PBXGroup;
 			children = (
+				D0F82CAF23981E17002E8600 /* README.md */,
 				1639016B1FD4975200C554BC /* JTCalendar */,
 				163901C01FD49C1700C554BC /* JTCalendar */,
 				1639016A1FD4975200C554BC /* Products */,
@@ -250,6 +253,7 @@
 				TargetAttributes = {
 					163901BE1FD49C1700C554BC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -276,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F82CB123981E17002E8600 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +422,7 @@
 		163901C51FD49C1700C554BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -429,6 +435,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathantribouharet.JTCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -436,6 +444,7 @@
 		163901C61FD49C1700C554BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -448,6 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathantribouharet.JTCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
