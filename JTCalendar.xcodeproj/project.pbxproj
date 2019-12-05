@@ -43,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		163901741FD4983D00C554BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Carthage Support/Info.plist"; sourceTree = SOURCE_ROOT; };
+		163901741FD4983D00C554BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		163901771FD4987A00C554BC /* JTCalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarManager.h; sourceTree = "<group>"; };
 		163901781FD4987A00C554BC /* JTCalendarSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarSettings.m; sourceTree = "<group>"; };
 		1639017A1FD4987A00C554BC /* JTCalendarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDay.h; sourceTree = "<group>"; };
@@ -78,6 +78,7 @@
 		163901BF1FD49C1700C554BC /* JTCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		163901C11FD49C1700C554BC /* JTCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
 		D0F82CAF23981E17002E8600 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0F82CBB2399106B002E8600 /* JTCalendarPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JTCalendarPackage; path = JTCalendar/JTCalendarPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +95,9 @@
 		1639015F1FD4975200C554BC = {
 			isa = PBXGroup;
 			children = (
+				D0F82CBB2399106B002E8600 /* JTCalendarPackage */,
 				D0F82CAF23981E17002E8600 /* README.md */,
+				163901741FD4983D00C554BC /* Info.plist */,
 				1639016B1FD4975200C554BC /* JTCalendar */,
 				1639016A1FD4975200C554BC /* Products */,
 			);
@@ -111,15 +114,6 @@
 		1639016B1FD4975200C554BC /* JTCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				163901741FD4983D00C554BC /* Info.plist */,
-				163901761FD4986100C554BC /* source files */,
-			);
-			path = JTCalendar;
-			sourceTree = "<group>";
-		};
-		163901761FD4986100C554BC /* source files */ = {
-			isa = PBXGroup;
-			children = (
 				163901C11FD49C1700C554BC /* JTCalendar.h */,
 				163901801FD4987A00C554BC /* JTCalendarDelegate.h */,
 				163901771FD4987A00C554BC /* JTCalendarManager.h */,
@@ -132,7 +126,7 @@
 				163901791FD4987A00C554BC /* Protocols */,
 				1639018A1FD4987B00C554BC /* Views */,
 			);
-			name = "source files";
+			path = JTCalendar;
 			sourceTree = "<group>";
 		};
 		163901791FD4987A00C554BC /* Protocols */ = {
