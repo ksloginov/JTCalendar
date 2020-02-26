@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "JTCalendar",
+    platforms: [
+        .iOS(.v10),
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -21,21 +24,6 @@ let package = Package(
         .target(
             name: "JTCalendar",
             path: "Sources",
-            exclude: [],
-            sources: ["JTCalendar",
-                      "JTCalendar/JTCalendarManager.m",
-                      "JTCalendar/JTCalendarDayView.m",
-                      "JTCalendar/JTCalendarDelegateManager.m",
-                      "JTCalendar/JTCalendarMenuView.m",
-                      "JTCalendar/JTCalendarPageView.m",
-                      "JTCalendar/JTCalendarScrollManager.m",
-                      "JTCalendar/JTCalendarSettings.m",
-                      "JTCalendar/JTCalendarWeekDayView.m",
-                      "JTCalendar/JTCalendarWeekDayView.m",
-                      "JTCalendar/JTCalendarWeekView.m",
-                      "JTCalendar/JTDateHelper.m",
-                      "JTCalendar/JTHorizontalCalendarView.m",
-                      "JTCalendar/JTVerticalCalendarView.m"],
-            publicHeadersPath: "JTCalendar"),
+            publicHeadersPath: nil),
     ]
 )
