@@ -17,6 +17,6 @@ let package = Package(
         .target(
             name: "JTCalendar",
             path: "Sources",
-            publicHeadersPath: "JTCalendar"),
+            publicHeadersPath: "Sources"),
     ]
 )
